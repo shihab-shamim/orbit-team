@@ -1044,7 +1044,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 function GalaxyTeam({
-  attributes
+  attributes,
+  RichTextComponent,
+  setAttributes
 }) {
   const {
     orbitTeam = {},
@@ -1053,19 +1055,63 @@ function GalaxyTeam({
   const {
     tag,
     title,
-    subTitle
+    subTitle,
+    brankMark,
+    brankTitle,
+    brankEst
   } = orbitTeam;
-  console.log(orbitTeam?.teamMembers);
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: "tsbo_galaxy-section",
     "aria-labelledby": "team-title"
-  }, options.showTag && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "tsbo_eyebrow"
-  }, tag), options.showTitle && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
-    id: "team-title"
-  }, title), options.showSubTitle && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "tsbo_lede"
-  }, subTitle), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, options.showTag && !RichTextComponent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    className: "tsbo_eyebrow",
+    dangerouslySetInnerHTML: {
+      __html: tag
+    }
+  }), options.showTag && RichTextComponent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichTextComponent, {
+    tagName: "span",
+    val: tag,
+    onChange: val => setAttributes({
+      orbitTeam: {
+        ...orbitTeam,
+        tag: val
+      }
+    }),
+    className: "tsbo_eyebrow",
+    placeholder: "Tag"
+  }), options.showTitle && !RichTextComponent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
+    id: "team-title",
+    dangerouslySetInnerHTML: {
+      __html: title
+    }
+  }), options.showTitle && RichTextComponent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichTextComponent, {
+    tagName: "h2",
+    val: title,
+    onChange: val => setAttributes({
+      orbitTeam: {
+        ...orbitTeam,
+        title: val
+      }
+    }),
+    className: "tsbo_title",
+    placeholder: "Title"
+  }), options.showSubTitle && !RichTextComponent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "tsbo_lede",
+    dangerouslySetInnerHTML: {
+      __html: subTitle
+    }
+  }), options.showSubTitle && RichTextComponent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichTextComponent, {
+    tagName: "p",
+    val: subTitle,
+    onChange: val => setAttributes({
+      orbitTeam: {
+        ...orbitTeam,
+        subTitle: val
+      }
+    }),
+    className: "tsbo_lede",
+    placeholder: "Sub Title"
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "tsbo_galaxy",
     role: "group",
     "aria-label": "Team members orbiting around the brand"
@@ -1082,14 +1128,59 @@ function GalaxyTeam({
     className: "tsbo_ring--3"
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "tsbo_core",
-    "aria-hidden": "true"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "tsbo_core__mark"
-  }, "Team"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "tsbo_core__title"
-  }, "Your Brand"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "tsbo_core__sub"
-  }, "est. 2026"))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
+    "aria-hidden": "true",
+    style: options?.uploadImage ? {
+      background: `url(${options?.image}) center/cover no-repeat`
+    } : {}
+  }, !options?.uploadImage && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, !RichTextComponent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "tsbo_core__mark",
+    dangerouslySetInnerHTML: {
+      __html: brankMark
+    }
+  }), RichTextComponent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichTextComponent, {
+    tagName: "div",
+    val: brankMark,
+    onChange: val => setAttributes({
+      orbitTeam: {
+        ...orbitTeam,
+        brankMark: val
+      }
+    }),
+    className: "tsbo_core__mark",
+    placeholder: "Mark"
+  }), !RichTextComponent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "tsbo_core__title",
+    dangerouslySetInnerHTML: {
+      __html: brankTitle
+    }
+  }), RichTextComponent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichTextComponent, {
+    tagName: "div",
+    val: brankTitle,
+    onChange: val => setAttributes({
+      orbitTeam: {
+        ...orbitTeam,
+        brankTitle: val
+      }
+    }),
+    className: "tsbo_core__title",
+    placeholder: "Title"
+  }), !RichTextComponent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "tsbo_core__sub",
+    dangerouslySetInnerHTML: {
+      __html: brankEst
+    }
+  }), RichTextComponent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichTextComponent, {
+    tagName: "div",
+    val: brankEst,
+    onChange: val => setAttributes({
+      orbitTeam: {
+        ...orbitTeam,
+        brankEst: val
+      }
+    }),
+    className: "tsbo_core__sub",
+    placeholder: "Est."
+  }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
     className: "tsbo_orbit tsbo_orbit--1",
     style: {
       "--total": 7

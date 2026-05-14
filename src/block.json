@@ -23,6 +23,9 @@
         "tag": "OUR TEAM",
         "title": "The people in our orbit",
         "subTitle": "A growing constellation of designers, engineers, and makers — circling one shared mission.",
+        "brankMark": "Team",
+        "brankTitle": "Your Brand",
+        "brankEst": "est. 2026",
         "teamMembers": [
           {
             "one": [
@@ -184,7 +187,9 @@
       "default": {
         "showTag": true,
         "showTitle": true,
-        "showSubTitle": true
+        "showSubTitle": true,
+        "uploadImage": false,
+        "image": ""
       }
     }
   },

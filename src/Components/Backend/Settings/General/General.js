@@ -7,6 +7,7 @@ import {
   ToggleControl,
 } from "@wordpress/components";
 import { updateData } from "../../../../utils/functions";
+import { InlineMediaUpload } from "../../../../../../bpl-tools/Components";
 
 const General = ({ attributes, setAttributes }) => {
   const { orbitTeam = {}, options = {} } = attributes;
@@ -48,6 +49,67 @@ const General = ({ attributes, setAttributes }) => {
             value={orbitTeam.subTitle}
             onChange={(v) =>
               setAttributes({ orbitTeam: updateData(orbitTeam, v, "subTitle") })
+            }
+          />
+        )}
+      </PanelBody>
+      <PanelBody
+        className="bPlPanelBody"
+        title={__("Brand Mark", "orbit-team")}
+        initialOpen={false}
+      >
+        {!options?.uploadImage && (
+          <>
+            <TextControl
+              label={__("Mark", "orbit-team")}
+              className="mt10"
+              placeholder="Enter mark"
+              value={orbitTeam.brankMark}
+              onChange={(v) =>
+                setAttributes({
+                  orbitTeam: updateData(orbitTeam, v, "brankMark"),
+                })
+              }
+            />
+            <TextControl
+              label={__("Title", "orbit-team")}
+              className="mt10"
+              placeholder="Enter title"
+              value={orbitTeam.brankTitle}
+              onChange={(v) =>
+                setAttributes({
+                  orbitTeam: updateData(orbitTeam, v, "brankTitle"),
+                })
+              }
+            />
+            <TextControl
+              label={__("Est.", "orbit-team")}
+              className="mt10"
+              placeholder="Enter est"
+              value={orbitTeam.brankEst}
+              onChange={(v) =>
+                setAttributes({
+                  orbitTeam: updateData(orbitTeam, v, "brankEst"),
+                })
+              }
+            />
+          </>
+        )}
+        <ToggleControl
+          className="mt10"
+          label={__("Upload Image", "orbit-team")}
+          checked={options.uploadImage}
+          onChange={(v) =>
+            setAttributes({ options: updateData(options, v, "uploadImage") })
+          }
+        />
+        {options.uploadImage && (
+          <InlineMediaUpload
+            label={__("Image", "orbit-team")}
+            className="mt10"
+            value={options.image}
+            onChange={(v) =>
+              setAttributes({ options: updateData(options, v, "image") })
             }
           />
         )}
