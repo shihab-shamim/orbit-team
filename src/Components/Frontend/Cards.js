@@ -3,7 +3,7 @@ export default function GalaxyTeam({
   RichTextComponent,
   setAttributes,
 }) {
-  const { orbitTeam = {}, options = {} } = attributes || {};
+  const { orbitTeam = {}, teamMembers = [], options = {} } = attributes || {};
   const { tag, title, subTitle, brankMark, brankTitle, brankEst } = orbitTeam;
 
   return (
@@ -68,7 +68,7 @@ export default function GalaxyTeam({
           <span className="tsbo_ring--1"></span>
           <span className="tsbo_ring--2"></span>
           <span className="tsbo_ring--3"></span> */}
-          {orbitTeam?.teamMembers?.map((member, i) => (
+          {teamMembers?.map((member, i) => (
             <span key={i} className={`tsbo_ring--${i + 1}`}></span>
           ))}
         </div>
@@ -147,7 +147,7 @@ export default function GalaxyTeam({
           )}
         </div>
 
-        {orbitTeam?.teamMembers?.map((orbitObj, i) => {
+        {teamMembers?.map((orbitObj, i) => {
           const orbitKey = Object.keys(orbitObj)[0];
           const members = orbitObj[orbitKey] || [];
           

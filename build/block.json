@@ -27,162 +27,165 @@
         "subTitle": "A growing constellation of designers, engineers, and makers — circling one shared mission.",
         "brankMark": "Team",
         "brankTitle": "Your Brand",
-        "brankEst": "est. 2026",
-        "teamMembers": [
-          {
-            "one": [
-              {
-                "name": "Ava Chen",
-                "img": "https://i.pravatar.cc/120?img=47",
-                "link": "#"
-              },
-              {
-                "name": "Marcus Reed",
-                "img": "https://i.pravatar.cc/120?img=12",
-                "link": "#"
-              },
-              {
-                "name": "Priya Shah",
-                "img": "https://i.pravatar.cc/120?img=32",
-                "link": "#"
-              },
-              {
-                "name": "Jonas Weber",
-                "img": "https://i.pravatar.cc/120?img=15",
-                "link": "#"
-              },
-              {
-                "name": "Lina Park",
-                "img": "https://i.pravatar.cc/120?img=49",
-                "link": "#"
-              },
-              {
-                "name": "Diego Alvarez",
-                "img": "https://i.pravatar.cc/120?img=14",
-                "link": "#"
-              },
-              {
-                "name": "Sophia Lee",
-                "img": "https://i.pravatar.cc/120?img=21",
-                "link": "#"
-              }
-            ]
-          },
-          {
-            "two": [
-              {
-                "name": "Hana Sato",
-                "img": "https://i.pravatar.cc/120?img=20",
-                "link": "#"
-              },
-              {
-                "name": "Noah Bennett",
-                "img": "https://i.pravatar.cc/120?img=8",
-                "link": "#"
-              },
-              {
-                "name": "Sara Nilsen",
-                "img": "https://i.pravatar.cc/120?img=44",
-                "link": "#"
-              },
-              {
-                "name": "Omar Idris",
-                "img": "https://i.pravatar.cc/120?img=33",
-                "link": "#"
-              },
-              {
-                "name": "Ella Brooks",
-                "img": "https://i.pravatar.cc/120?img=23",
-                "link": "#"
-              },
-              {
-                "name": "Ravi Mehta",
-                "img": "https://i.pravatar.cc/120?img=51",
-                "link": "#"
-              },
-              {
-                "name": "Mei Lin",
-                "img": "https://i.pravatar.cc/120?img=36",
-                "link": "#"
-              },
-              {
-                "name": "Tom Hayes",
-                "img": "https://i.pravatar.cc/120?img=11",
-                "link": "#"
-              },
-              {
-                "name": "Zara Khan",
-                "img": "https://i.pravatar.cc/120?img=45",
-                "link": "#"
-              }
-            ]
-          },
-          {
-            "three": [
-              {
-                "name": "Felix Moore",
-                "img": "https://i.pravatar.cc/120?img=3",
-                "link": "#"
-              },
-              {
-                "name": "Isla Ward",
-                "img": "https://i.pravatar.cc/120?img=25",
-                "link": "#"
-              },
-              {
-                "name": "Kenji Mori",
-                "img": "https://i.pravatar.cc/120?img=17",
-                "link": "#"
-              },
-              {
-                "name": "Anya Volkov",
-                "img": "https://i.pravatar.cc/120?img=41",
-                "link": "#"
-              },
-              {
-                "name": "Sam Cole",
-                "img": "https://i.pravatar.cc/120?img=13",
-                "link": "#"
-              },
-              {
-                "name": "Nora Singh",
-                "img": "https://i.pravatar.cc/120?img=38",
-                "link": "#"
-              },
-              {
-                "name": "Mateo Cruz",
-                "img": "https://i.pravatar.cc/120?img=18",
-                "link": "#"
-              },
-              {
-                "name": "Yui Tanaka",
-                "img": "https://i.pravatar.cc/120?img=29",
-                "link": "#"
-              },
-              {
-                "name": "Leo Hart",
-                "img": "https://i.pravatar.cc/120?img=4",
-                "link": "#"
-              },
-              {
-                "name": "Maya Owens",
-                "img": "https://i.pravatar.cc/120?img=48",
-                "link": "#"
-              },
-              {
-                "name": "Theo Vance",
-                "img": "https://i.pravatar.cc/120?img=7",
-                "link": "#"
-              },
-              {
-                "name": "Aiko Hara",
-                "img": "https://i.pravatar.cc/120?img=26",
-                "link": "#"
-              }
-            ]
-          }
-        ]
+        "brankEst": "est. 2026"
       }
+    },
+    "teamMembers": {
+      "type": "array",
+      "default": [
+        {
+          "one": [
+            {
+              "name": "Ava Chen",
+              "img": "https://i.pravatar.cc/120?img=47",
+              "link": "#"
+            },
+            {
+              "name": "Marcus Reed",
+              "img": "https://i.pravatar.cc/120?img=12",
+              "link": "#"
+            },
+            {
+              "name": "Priya Shah",
+              "img": "https://i.pravatar.cc/120?img=32",
+              "link": "#"
+            },
+            {
+              "name": "Jonas Weber",
+              "img": "https://i.pravatar.cc/120?img=15",
+              "link": "#"
+            },
+            {
+              "name": "Lina Park",
+              "img": "https://i.pravatar.cc/120?img=49",
+              "link": "#"
+            },
+            {
+              "name": "Diego Alvarez",
+              "img": "https://i.pravatar.cc/120?img=14",
+              "link": "#"
+            },
+            {
+              "name": "Sophia Lee",
+              "img": "https://i.pravatar.cc/120?img=21",
+              "link": "#"
+            }
+          ]
+        },
+        {
+          "two": [
+            {
+              "name": "Hana Sato",
+              "img": "https://i.pravatar.cc/120?img=20",
+              "link": "#"
+            },
+            {
+              "name": "Noah Bennett",
+              "img": "https://i.pravatar.cc/120?img=8",
+              "link": "#"
+            },
+            {
+              "name": "Sara Nilsen",
+              "img": "https://i.pravatar.cc/120?img=44",
+              "link": "#"
+            },
+            {
+              "name": "Omar Idris",
+              "img": "https://i.pravatar.cc/120?img=33",
+              "link": "#"
+            },
+            {
+              "name": "Ella Brooks",
+              "img": "https://i.pravatar.cc/120?img=23",
+              "link": "#"
+            },
+            {
+              "name": "Ravi Mehta",
+              "img": "https://i.pravatar.cc/120?img=51",
+              "link": "#"
+            },
+            {
+              "name": "Mei Lin",
+              "img": "https://i.pravatar.cc/120?img=36",
+              "link": "#"
+            },
+            {
+              "name": "Tom Hayes",
+              "img": "https://i.pravatar.cc/120?img=11",
+              "link": "#"
+            },
+            {
+              "name": "Zara Khan",
+              "img": "https://i.pravatar.cc/120?img=45",
+              "link": "#"
+            }
+          ]
+        },
+        {
+          "three": [
+            {
+              "name": "Felix Moore",
+              "img": "https://i.pravatar.cc/120?img=3",
+              "link": "#"
+            },
+            {
+              "name": "Isla Ward",
+              "img": "https://i.pravatar.cc/120?img=25",
+              "link": "#"
+            },
+            {
+              "name": "Kenji Mori",
+              "img": "https://i.pravatar.cc/120?img=17",
+              "link": "#"
+            },
+            {
+              "name": "Anya Volkov",
+              "img": "https://i.pravatar.cc/120?img=41",
+              "link": "#"
+            },
+            {
+              "name": "Sam Cole",
+              "img": "https://i.pravatar.cc/120?img=13",
+              "link": "#"
+            },
+            {
+              "name": "Nora Singh",
+              "img": "https://i.pravatar.cc/120?img=38",
+              "link": "#"
+            },
+            {
+              "name": "Mateo Cruz",
+              "img": "https://i.pravatar.cc/120?img=18",
+              "link": "#"
+            },
+            {
+              "name": "Yui Tanaka",
+              "img": "https://i.pravatar.cc/120?img=29",
+              "link": "#"
+            },
+            {
+              "name": "Leo Hart",
+              "img": "https://i.pravatar.cc/120?img=4",
+              "link": "#"
+            },
+            {
+              "name": "Maya Owens",
+              "img": "https://i.pravatar.cc/120?img=48",
+              "link": "#"
+            },
+            {
+              "name": "Theo Vance",
+              "img": "https://i.pravatar.cc/120?img=7",
+              "link": "#"
+            },
+            {
+              "name": "Aiko Hara",
+              "img": "https://i.pravatar.cc/120?img=26",
+              "link": "#"
+            }
+          ]
+        }
+      ]
     },
     "options": {
       "type": "object",

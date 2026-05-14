@@ -11,10 +11,34 @@ import {
   BButtonGroup,
   BtnGroup,
   InlineMediaUpload,
+  ItemsPanel,
 } from "../../../../../../bpl-tools/Components";
 
+const MemberSettings = ({ index, value, onChange }) => {
+  const item = value[index] || {};
+  return (
+    <>
+      <TextControl
+        label={__("Name", "orbit-team")}
+        value={item.name}
+        onChange={(v) => onChange(updateData(value, v, index, "name"))}
+      />
+      <InlineMediaUpload
+        label={__("Image", "orbit-team")}
+        value={item.img}
+        onChange={(v) => onChange(updateData(value, v, index, "img"))}
+      />
+      <TextControl
+        label={__("Link", "orbit-team")}
+        value={item.link}
+        onChange={(v) => onChange(updateData(value, v, index, "link"))}
+      />
+    </>
+  );
+};
+
 const General = ({ attributes, setAttributes }) => {
-  const { orbitTeam = {}, options = {} } = attributes;
+  const { orbitTeam = {}, teamMembers = [], options = {} } = attributes;
 
   const handleAddOrbit = () => {
     const orbitNames = [
@@ -29,7 +53,7 @@ const General = ({ attributes, setAttributes }) => {
       "nine",
       "ten",
     ];
-    const currentMembers = orbitTeam?.teamMembers || [];
+    const currentMembers = teamMembers || [];
     if (currentMembers.length < 10) {
       const nextIndex = currentMembers.length;
       const nextName = orbitNames[nextIndex];
@@ -45,23 +69,17 @@ const General = ({ attributes, setAttributes }) => {
 
       const newOrbit = { [nextName]: demoMembers };
       setAttributes({
-        orbitTeam: {
-          ...orbitTeam,
-          teamMembers: [...currentMembers, newOrbit],
-        },
+        teamMembers: [...currentMembers, newOrbit],
       });
     }
   };
 
   const handleRemoveOrbit = () => {
-    const currentMembers = orbitTeam?.teamMembers || [];
+    const currentMembers = teamMembers || [];
     if (currentMembers.length > 1) {
       const newMembers = currentMembers.slice(0, -1);
       setAttributes({
-        orbitTeam: {
-          ...orbitTeam,
-          teamMembers: newMembers,
-        },
+        teamMembers: newMembers,
       });
 
       // Reset orbitValue if the currently selected orbit was removed
@@ -193,7 +211,7 @@ const General = ({ attributes, setAttributes }) => {
             setAttributes({ options: updateData(options, v, "orbitValue") })
           }
           options={
-            orbitTeam?.teamMembers?.map((item) => {
+            teamMembers?.map((item) => {
               const key = Object.keys(item)[0];
               return {
                 value: key,
@@ -202,6 +220,32 @@ const General = ({ attributes, setAttributes }) => {
             }) || []
           }
         />
+
+        {options.orbitValue && (
+          <ItemsPanel
+            design="sortable"
+            itemLabel={__("Member", "orbit-team")}
+            value={
+              teamMembers.find(
+                (orbit) => Object.keys(orbit)[0] === options.orbitValue,
+              )?.[options.orbitValue] || []
+            }
+            onChange={(newMembers) => {
+              const orbitIndex = teamMembers.findIndex(
+                (orbit) => Object.keys(orbit)[0] === options.orbitValue,
+              );
+              if (orbitIndex !== -1) {
+                const updatedTeamMembers = [...teamMembers];
+                updatedTeamMembers[orbitIndex] = {
+                  [options.orbitValue]: newMembers,
+                };
+                setAttributes({ teamMembers: updatedTeamMembers });
+              }
+            }}
+            newItem={{ name: "", img: "", link: "#" }}
+            ItemSettings={MemberSettings}
+          />
+        )}
 
         <div
           style={{
@@ -225,9 +269,9 @@ const General = ({ attributes, setAttributes }) => {
             }}
             onMouseOver={(e) => (e.target.style.background = "#006799")}
             onMouseOut={(e) => (e.target.style.background = "#007cba")}
-            disabled={orbitTeam?.teamMembers?.length >= 10}
+            disabled={teamMembers?.length >= 10}
           >
-            {orbitTeam?.teamMembers?.length >= 10
+            {teamMembers?.length >= 10
               ? __("Limit Reached", "orbit-team")
               : __("Add Orbit", "orbit-team")}
           </button>
@@ -247,7 +291,7 @@ const General = ({ attributes, setAttributes }) => {
             }}
             onMouseOver={(e) => (e.target.style.background = "#b32d2e")}
             onMouseOut={(e) => (e.target.style.background = "#d63638")}
-            disabled={orbitTeam?.teamMembers?.length <= 1}
+            disabled={teamMembers?.length <= 1}
           >
             {__("Remove Orbit", "orbit-team")}
           </button>
