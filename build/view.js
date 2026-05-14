@@ -1195,7 +1195,9 @@ function GalaxyTeam({
       className: "tsbo_star__inner"
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
       href: member.link || "#",
-      "aria-label": member.name
+      "aria-label": member.name,
+      target: options.linkOpen ? "_blank" : "_self",
+      rel: "noreferrer"
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
       src: member.img,
       alt: ""

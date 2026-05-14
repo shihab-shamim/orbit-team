@@ -195,7 +195,8 @@
         "showSubTitle": true,
         "uploadImage": false,
         "image": "",
-        "orbitValue": "one"
+        "orbitValue": "one",
+        "linkOpen": true
       }
     }
   },

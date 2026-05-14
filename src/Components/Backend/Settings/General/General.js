@@ -264,7 +264,7 @@ const General = ({ attributes, setAttributes }) => {
               borderRadius: "5px",
               cursor: "pointer",
               fontWeight: "500",
-              fontSize: "14px",
+              fontSize: "12px",
               transition: "background 0.3s ease",
             }}
             onMouseOver={(e) => (e.target.style.background = "#006799")}
@@ -285,7 +285,7 @@ const General = ({ attributes, setAttributes }) => {
               borderRadius: "5px",
               cursor: "pointer",
               fontWeight: "500",
-              fontSize: "14px",
+              fontSize: "12px",
               marginLeft: "10px",
               transition: "background 0.3s ease",
             }}
@@ -324,6 +324,14 @@ const General = ({ attributes, setAttributes }) => {
           checked={options.showSubTitle}
           onChange={(v) =>
             setAttributes({ options: updateData(options, v, "showSubTitle") })
+          }
+        />
+        <ToggleControl
+          className="mt10"
+          label={__("Link Open In New Tab", "orbit-team")}
+          checked={options.linkOpen}
+          onChange={(v) =>
+            setAttributes({ options: updateData(options, v, "linkOpen") })
           }
         />
       </PanelBody>

@@ -150,17 +150,23 @@ export default function GalaxyTeam({
         {teamMembers?.map((orbitObj, i) => {
           const orbitKey = Object.keys(orbitObj)[0];
           const members = orbitObj[orbitKey] || [];
-          
+
           return (
-            <ul key={i} className={`tsbo_orbit tsbo_orbit--${i + 1}`} style={{ "--total": members.length }}>
+            <ul
+              key={i}
+              className={`tsbo_orbit tsbo_orbit--${i + 1}`}
+              style={{ "--total": members.length }}
+            >
               {members.map((member, j) => (
                 <li className="tsbo_star" key={j} style={{ "--seat": j }}>
                   <div className="tsbo_star__inner">
-                    <a href={member.link || "#"} aria-label={member.name}>
-                      <img
-                        src={member.img}
-                        alt=""
-                      />
+                    <a
+                      href={member.link || "#"}
+                      aria-label={member.name}
+                      target={options.linkOpen ? "_blank" : "_self"}
+                      rel="noreferrer"
+                    >
+                      <img src={member.img} alt="" />
                       <span className="tsbo_name">{member.name}</span>
                     </a>
                   </div>
