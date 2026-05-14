@@ -16,6 +16,68 @@ import {
 const General = ({ attributes, setAttributes }) => {
   const { orbitTeam = {}, options = {} } = attributes;
 
+  const handleAddOrbit = () => {
+    const orbitNames = [
+      "one",
+      "two",
+      "three",
+      "four",
+      "five",
+      "six",
+      "seven",
+      "eight",
+      "nine",
+      "ten",
+    ];
+    const currentMembers = orbitTeam?.teamMembers || [];
+    if (currentMembers.length < 10) {
+      const nextIndex = currentMembers.length;
+      const nextName = orbitNames[nextIndex];
+      const memberCount = nextIndex + 1;
+
+      const demoMembers = Array.from({ length: memberCount }, (_, i) => ({
+        name: `Member ${i + 1}`,
+        img: `https://i.pravatar.cc/120?img=${
+          Math.floor(Math.random() * 70) + 1
+        }`,
+        link: "#",
+      }));
+
+      const newOrbit = { [nextName]: demoMembers };
+      setAttributes({
+        orbitTeam: {
+          ...orbitTeam,
+          teamMembers: [...currentMembers, newOrbit],
+        },
+      });
+    }
+  };
+
+  const handleRemoveOrbit = () => {
+    const currentMembers = orbitTeam?.teamMembers || [];
+    if (currentMembers.length > 1) {
+      const newMembers = currentMembers.slice(0, -1);
+      setAttributes({
+        orbitTeam: {
+          ...orbitTeam,
+          teamMembers: newMembers,
+        },
+      });
+
+      // Reset orbitValue if the currently selected orbit was removed
+      const lastOrbitKey = Object.keys(
+        currentMembers[currentMembers.length - 1],
+      )[0];
+      if (options.orbitValue === lastOrbitKey) {
+        const nextSelected =
+          newMembers.length > 0
+            ? Object.keys(newMembers[newMembers.length - 1])[0]
+            : "";
+        setAttributes({ options: { ...options, orbitValue: nextSelected } });
+      }
+    }
+  };
+
   return (
     <>
       <PanelBody
@@ -130,13 +192,66 @@ const General = ({ attributes, setAttributes }) => {
           onChange={(v) =>
             setAttributes({ options: updateData(options, v, "orbitValue") })
           }
-          options={[
-            orbitTeam?.teamMembers?.map((item) => ({
-              value: item.key,
-              label: item.key,
-            })),
-          ]}
+          options={
+            orbitTeam?.teamMembers?.map((item) => {
+              const key = Object.keys(item)[0];
+              return {
+                value: key,
+                label: key.charAt(0).toUpperCase() + key.slice(1), // Capitalizes the first letter (e.g. "One")
+              };
+            }) || []
+          }
         />
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "15px",
+          }}
+        >
+          <button
+            onClick={handleAddOrbit}
+            style={{
+              padding: "10px 20px",
+              background: "#007cba",
+              color: "#fff",
+              border: "none",
+              borderRadius: "5px",
+              cursor: "pointer",
+              fontWeight: "500",
+              fontSize: "14px",
+              transition: "background 0.3s ease",
+            }}
+            onMouseOver={(e) => (e.target.style.background = "#006799")}
+            onMouseOut={(e) => (e.target.style.background = "#007cba")}
+            disabled={orbitTeam?.teamMembers?.length >= 10}
+          >
+            {orbitTeam?.teamMembers?.length >= 10
+              ? __("Limit Reached", "orbit-team")
+              : __("Add Orbit", "orbit-team")}
+          </button>
+          <button
+            onClick={handleRemoveOrbit}
+            style={{
+              padding: "10px 20px",
+              background: "#d63638",
+              color: "#fff",
+              border: "none",
+              borderRadius: "5px",
+              cursor: "pointer",
+              fontWeight: "500",
+              fontSize: "14px",
+              marginLeft: "10px",
+              transition: "background 0.3s ease",
+            }}
+            onMouseOver={(e) => (e.target.style.background = "#b32d2e")}
+            onMouseOut={(e) => (e.target.style.background = "#d63638")}
+            disabled={orbitTeam?.teamMembers?.length <= 1}
+          >
+            {__("Remove Orbit", "orbit-team")}
+          </button>
+        </div>
       </PanelBody>
       <PanelBody
         initialOpen={false}
