@@ -1,12 +1,13 @@
-export default function GalaxyTeam() {
+export default function GalaxyTeam({ attributes }) {
+  const { orbitTeam = {}, options = {} } = attributes || {};
+  const { tag, title, subTitle } = orbitTeam;
+  console.log(orbitTeam?.teamMembers);
+
   return (
     <section className="tsbo_galaxy-section" aria-labelledby="team-title">
-      <span className="tsbo_eyebrow">Our team</span>
-      <h2 id="team-title">The people in our orbit</h2>
-      <p className="tsbo_lede">
-        A growing constellation of designers, engineers, and makers — circling
-        one shared mission.
-      </p>
+      {options.showTag && <span className="tsbo_eyebrow">{tag}</span>}
+      {options.showTitle && <h2 id="team-title">{title}</h2>}
+      {options.showSubTitle && <p className="tsbo_lede">{subTitle}</p>}
 
       <div
         className="tsbo_galaxy"
@@ -18,7 +19,7 @@ export default function GalaxyTeam() {
           <span className="tsbo_ring--1"></span>
           <span className="tsbo_ring--2"></span>
           <span className="tsbo_ring--3"></span>
-          <span className="tsbo_ring--4"></span>
+          {/* <span className="tsbo_ring--4"></span> */}
         </div>
 
         <div className="tsbo_core" aria-hidden="true">
@@ -38,12 +39,15 @@ export default function GalaxyTeam() {
             { name: "Jonas Weber", img: 15 },
             { name: "Lina Park", img: 49 },
             { name: "Diego Alvarez", img: 14 },
-            { name: "Diego Alvarez", img: 14 }
+            { name: "Diego Alvarez", img: 14 },
           ].map((member, i) => (
             <li className="tsbo_star" key={i} style={{ "--seat": i }}>
               <div className="tsbo_star__inner">
                 <a href="#" aria-label={member.name}>
-                  <img src={`https://i.pravatar.cc/120?img=${member.img}`} alt="" />
+                  <img
+                    src={`https://i.pravatar.cc/120?img=${member.img}`}
+                    alt=""
+                  />
                   <span className="tsbo_name">{member.name}</span>
                 </a>
               </div>
@@ -62,12 +66,15 @@ export default function GalaxyTeam() {
             { name: "Ravi Mehta", img: 51 },
             { name: "Mei Lin", img: 36 },
             { name: "Tom Hayes", img: 11 },
-            { name: "Zara Khan", img: 45 }
+            { name: "Zara Khan", img: 45 },
           ].map((member, i) => (
             <li className="tsbo_star" key={i} style={{ "--seat": i }}>
               <div className="tsbo_star__inner">
                 <a href="#" aria-label={member.name}>
-                  <img src={`https://i.pravatar.cc/120?img=${member.img}`} alt="" />
+                  <img
+                    src={`https://i.pravatar.cc/120?img=${member.img}`}
+                    alt=""
+                  />
                   <span className="tsbo_name">{member.name}</span>
                 </a>
               </div>
@@ -89,12 +96,15 @@ export default function GalaxyTeam() {
             { name: "Leo Hart", img: 4 },
             { name: "Maya Owens", img: 48 },
             { name: "Theo Vance", img: 7 },
-            { name: "Aiko Hara", img: 26 }
+            { name: "Aiko Hara", img: 26 },
           ].map((member, i) => (
             <li className="tsbo_star" key={i} style={{ "--seat": i }}>
               <div className="tsbo_star__inner">
                 <a href="#" aria-label={member.name}>
-                  <img src={`https://i.pravatar.cc/120?img=${member.img}`} alt="" />
+                  <img
+                    src={`https://i.pravatar.cc/120?img=${member.img}`}
+                    alt=""
+                  />
                   <span className="tsbo_name">{member.name}</span>
                 </a>
               </div>
@@ -103,7 +113,7 @@ export default function GalaxyTeam() {
         </ul>
 
         {/* Orbit 4 · 7 seats */}
-        <ul className="tsbo_orbit tsbo_orbit--4" style={{ "--total": 7 }}>
+        {/* <ul className="tsbo_orbit tsbo_orbit--4" style={{ "--total": 7 }}>
           {[
             { name: "Ava Chen", img: 47 },
             { name: "Marcus Reed", img: 12 },
@@ -122,7 +132,7 @@ export default function GalaxyTeam() {
               </div>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </section>
   );

@@ -22,7 +22,7 @@ const Style = ({ attributes, setAttributes }) => {
       <PanelBody
       
         className="bPlPanelBody"
-        title={__("Purpose styles title", "b-blocks")}
+        title={__("Purpose styles title", "orbit-team")}
         initialOpen={false}
       >
         <ColorsControl

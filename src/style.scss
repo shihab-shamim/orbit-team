@@ -260,10 +260,10 @@
 }
 @keyframes spin-rev {
   from {
-    transform: rotate(0deg);
+    transform: rotate(calc(var(--seat) * (-360deg / var(--total))));
   }
   to {
-    transform: rotate(-360deg);
+    transform: rotate(calc(var(--seat) * (-360deg / var(--total)) - 360deg));
   }
 }
 

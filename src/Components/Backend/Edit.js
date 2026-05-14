@@ -6,7 +6,6 @@ import GalaxyTeam from "../Frontend/Cards";
 
 const Edit = (props) => {
   const { attributes, setAttributes, clientId } = props;
-  const { purposeType } = attributes;
 
   return (
     <>
@@ -14,7 +13,7 @@ const Edit = (props) => {
 
       <div {...useBlockProps()}>
         <Style attributes={attributes} id={`block-${clientId}`} />
-        <GalaxyTeam />
+        <GalaxyTeam attributes={attributes} />
       </div>
     </>
   );

@@ -1043,17 +1043,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-function GalaxyTeam() {
+function GalaxyTeam({
+  attributes
+}) {
+  const {
+    orbitTeam = {},
+    options = {}
+  } = attributes || {};
+  const {
+    tag,
+    title,
+    subTitle
+  } = orbitTeam;
+  console.log(orbitTeam?.teamMembers);
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: "tsbo_galaxy-section",
     "aria-labelledby": "team-title"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+  }, options.showTag && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     className: "tsbo_eyebrow"
-  }, "Our team"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
+  }, tag), options.showTitle && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
     id: "team-title"
-  }, "The people in our orbit"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+  }, title), options.showSubTitle && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "tsbo_lede"
-  }, "A growing constellation of designers, engineers, and makers \u2014 circling one shared mission."), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, subTitle), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "tsbo_galaxy",
     role: "group",
     "aria-label": "Team members orbiting around the brand"
@@ -1068,8 +1080,6 @@ function GalaxyTeam() {
     className: "tsbo_ring--2"
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     className: "tsbo_ring--3"
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "tsbo_ring--4"
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "tsbo_core",
     "aria-hidden": "true"
@@ -1210,48 +1220,6 @@ function GalaxyTeam() {
   }, {
     name: "Aiko Hara",
     img: 26
-  }].map((member, i) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
-    className: "tsbo_star",
-    key: i,
-    style: {
-      "--seat": i
-    }
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "tsbo_star__inner"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    "aria-label": member.name
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    src: `https://i.pravatar.cc/120?img=${member.img}`,
-    alt: ""
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "tsbo_name"
-  }, member.name)))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "tsbo_orbit tsbo_orbit--4",
-    style: {
-      "--total": 7
-    }
-  }, [{
-    name: "Ava Chen",
-    img: 47
-  }, {
-    name: "Marcus Reed",
-    img: 12
-  }, {
-    name: "Priya Shah",
-    img: 32
-  }, {
-    name: "Jonas Weber",
-    img: 15
-  }, {
-    name: "Lina Park",
-    img: 49
-  }, {
-    name: "Diego Alvarez",
-    img: 14
-  }, {
-    name: "Diego Alvarez",
-    img: 14
   }].map((member, i) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     className: "tsbo_star",
     key: i,
@@ -1428,7 +1396,9 @@ document.addEventListener("DOMContentLoaded", () => {
     (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(blockNameEl).render((0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Components_Common_Style__WEBPACK_IMPORTED_MODULE_3__["default"], {
       attributes: attributes,
       id: blockNameEl.id
-    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Components_Frontend_Cards__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Components_Frontend_Cards__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      attributes: attributes
+    })));
     blockNameEl?.removeAttribute("data-attributes");
   });
 });
