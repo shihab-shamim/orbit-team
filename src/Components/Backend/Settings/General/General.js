@@ -7,7 +7,11 @@ import {
   ToggleControl,
 } from "@wordpress/components";
 import { updateData } from "../../../../utils/functions";
-import { InlineMediaUpload } from "../../../../../../bpl-tools/Components";
+import {
+  BButtonGroup,
+  BtnGroup,
+  InlineMediaUpload,
+} from "../../../../../../bpl-tools/Components";
 
 const General = ({ attributes, setAttributes }) => {
   const { orbitTeam = {}, options = {} } = attributes;
@@ -113,6 +117,26 @@ const General = ({ attributes, setAttributes }) => {
             }
           />
         )}
+      </PanelBody>
+      <PanelBody
+        title={__("Orbit Team Add Or Remove", "orbit-team")}
+        className="bPlPanelBody"
+        initialOpen={false}
+      >
+        <BButtonGroup
+          className="mt10"
+          label={__("", "orbit-team")}
+          value={options.orbitValue}
+          onChange={(v) =>
+            setAttributes({ options: updateData(options, v, "orbitValue") })
+          }
+          options={[
+            orbitTeam?.teamMembers?.map((item) => ({
+              value: item.key,
+              label: item.key,
+            })),
+          ]}
+        />
       </PanelBody>
       <PanelBody
         initialOpen={false}

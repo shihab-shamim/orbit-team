@@ -72,7 +72,7 @@
 .tsbo_galaxy-section .tsbo_ring--1 {
   width: 360px;
   height: 360px;
-  border: 1px dashed rgba(255, 255, 255, 0.18);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .tsbo_galaxy-section .tsbo_ring--2 {
   width: 560px;
@@ -112,6 +112,21 @@
 .tsbo_galaxy-section .tsbo_ring--9 {
   width: 1960px;
   height: 1960px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+.tsbo_galaxy-section .tsbo_ring--10 {
+  width: 2160px;
+  height: 2160px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+.tsbo_galaxy-section .tsbo_ring--11 {
+  width: 2360px;
+  height: 2360px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+.tsbo_galaxy-section .tsbo_ring--12 {
+  width: 2560px;
+  height: 2560px;
   border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .tsbo_galaxy-section .tsbo_halo {
@@ -158,16 +173,40 @@
   border-radius: 50%;
 }
 .tsbo_galaxy-section .tsbo_orbit--1 {
-  animation: spin 32s linear infinite;
+  animation: spin 35s linear infinite normal;
 }
 .tsbo_galaxy-section .tsbo_orbit--2 {
-  animation: spin 48s linear infinite reverse;
+  animation: spin 50s linear infinite reverse;
 }
 .tsbo_galaxy-section .tsbo_orbit--3 {
-  animation: spin 70s linear infinite;
+  animation: spin 65s linear infinite normal;
 }
 .tsbo_galaxy-section .tsbo_orbit--4 {
-  animation: spin 90s linear infinite reverse;
+  animation: spin 80s linear infinite reverse;
+}
+.tsbo_galaxy-section .tsbo_orbit--5 {
+  animation: spin 95s linear infinite normal;
+}
+.tsbo_galaxy-section .tsbo_orbit--6 {
+  animation: spin 110s linear infinite reverse;
+}
+.tsbo_galaxy-section .tsbo_orbit--7 {
+  animation: spin 125s linear infinite normal;
+}
+.tsbo_galaxy-section .tsbo_orbit--8 {
+  animation: spin 140s linear infinite reverse;
+}
+.tsbo_galaxy-section .tsbo_orbit--9 {
+  animation: spin 155s linear infinite normal;
+}
+.tsbo_galaxy-section .tsbo_orbit--10 {
+  animation: spin 170s linear infinite reverse;
+}
+.tsbo_galaxy-section .tsbo_orbit--11 {
+  animation: spin 185s linear infinite normal;
+}
+.tsbo_galaxy-section .tsbo_orbit--12 {
+  animation: spin 200s linear infinite reverse;
 }
 .tsbo_galaxy-section .tsbo_star {
   position: absolute;
@@ -227,32 +266,74 @@
 .tsbo_galaxy-section .tsbo_orbit--1 .tsbo_star {
   transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-180px);
 }
+.tsbo_galaxy-section .tsbo_orbit--1 .tsbo_star__inner {
+  animation: spin-rev 35s linear infinite normal;
+}
 .tsbo_galaxy-section .tsbo_orbit--2 .tsbo_star {
   transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-280px);
+}
+.tsbo_galaxy-section .tsbo_orbit--2 .tsbo_star__inner {
+  animation: spin-rev 50s linear infinite reverse;
 }
 .tsbo_galaxy-section .tsbo_orbit--3 .tsbo_star {
   transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-380px);
 }
+.tsbo_galaxy-section .tsbo_orbit--3 .tsbo_star__inner {
+  animation: spin-rev 65s linear infinite normal;
+}
 .tsbo_galaxy-section .tsbo_orbit--4 .tsbo_star {
   transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-480px);
 }
-.tsbo_galaxy-section .tsbo_star__inner {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  transform: rotate(calc(var(--seat) * -360deg / var(--total)));
-}
-.tsbo_galaxy-section .tsbo_orbit--1 .tsbo_star__inner {
-  animation: spin-rev 32s linear infinite;
-}
-.tsbo_galaxy-section .tsbo_orbit--2 .tsbo_star__inner {
-  animation: spin-rev 48s linear infinite reverse;
-}
-.tsbo_galaxy-section .tsbo_orbit--3 .tsbo_star__inner {
-  animation: spin-rev 70s linear infinite;
-}
 .tsbo_galaxy-section .tsbo_orbit--4 .tsbo_star__inner {
-  animation: spin-rev 90s linear infinite reverse;
+  animation: spin-rev 80s linear infinite reverse;
+}
+.tsbo_galaxy-section .tsbo_orbit--5 .tsbo_star {
+  transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-580px);
+}
+.tsbo_galaxy-section .tsbo_orbit--5 .tsbo_star__inner {
+  animation: spin-rev 95s linear infinite normal;
+}
+.tsbo_galaxy-section .tsbo_orbit--6 .tsbo_star {
+  transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-680px);
+}
+.tsbo_galaxy-section .tsbo_orbit--6 .tsbo_star__inner {
+  animation: spin-rev 110s linear infinite reverse;
+}
+.tsbo_galaxy-section .tsbo_orbit--7 .tsbo_star {
+  transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-780px);
+}
+.tsbo_galaxy-section .tsbo_orbit--7 .tsbo_star__inner {
+  animation: spin-rev 125s linear infinite normal;
+}
+.tsbo_galaxy-section .tsbo_orbit--8 .tsbo_star {
+  transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-880px);
+}
+.tsbo_galaxy-section .tsbo_orbit--8 .tsbo_star__inner {
+  animation: spin-rev 140s linear infinite reverse;
+}
+.tsbo_galaxy-section .tsbo_orbit--9 .tsbo_star {
+  transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-980px);
+}
+.tsbo_galaxy-section .tsbo_orbit--9 .tsbo_star__inner {
+  animation: spin-rev 155s linear infinite normal;
+}
+.tsbo_galaxy-section .tsbo_orbit--10 .tsbo_star {
+  transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-1080px);
+}
+.tsbo_galaxy-section .tsbo_orbit--10 .tsbo_star__inner {
+  animation: spin-rev 170s linear infinite reverse;
+}
+.tsbo_galaxy-section .tsbo_orbit--11 .tsbo_star {
+  transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-1180px);
+}
+.tsbo_galaxy-section .tsbo_orbit--11 .tsbo_star__inner {
+  animation: spin-rev 185s linear infinite normal;
+}
+.tsbo_galaxy-section .tsbo_orbit--12 .tsbo_star {
+  transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-1280px);
+}
+.tsbo_galaxy-section .tsbo_orbit--12 .tsbo_star__inner {
+  animation: spin-rev 200s linear infinite reverse;
 }
 
 @keyframes spin {
@@ -283,22 +364,6 @@
     width: 760px;
     height: 760px;
   }
-  .tsbo_galaxy-section .tsbo_ring--1 {
-    width: 280px;
-    height: 280px;
-  }
-  .tsbo_galaxy-section .tsbo_ring--2 {
-    width: 440px;
-    height: 440px;
-  }
-  .tsbo_galaxy-section .tsbo_ring--3 {
-    width: 600px;
-    height: 600px;
-  }
-  .tsbo_galaxy-section .tsbo_ring--4 {
-    width: 760px;
-    height: 760px;
-  }
   .tsbo_galaxy-section .tsbo_halo {
     width: 180px;
     height: 180px;
@@ -312,17 +377,89 @@
     height: 52px;
     margin: -26px 0 0 -26px;
   }
+  .tsbo_galaxy-section .tsbo_ring--1 {
+    width: 280px;
+    height: 280px;
+  }
   .tsbo_galaxy-section .tsbo_orbit--1 .tsbo_star {
     transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-140px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--2 {
+    width: 440px;
+    height: 440px;
   }
   .tsbo_galaxy-section .tsbo_orbit--2 .tsbo_star {
     transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-220px);
   }
+  .tsbo_galaxy-section .tsbo_ring--3 {
+    width: 600px;
+    height: 600px;
+  }
   .tsbo_galaxy-section .tsbo_orbit--3 .tsbo_star {
     transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-300px);
   }
+  .tsbo_galaxy-section .tsbo_ring--4 {
+    width: 760px;
+    height: 760px;
+  }
   .tsbo_galaxy-section .tsbo_orbit--4 .tsbo_star {
     transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-380px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--5 {
+    width: 920px;
+    height: 920px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--5 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-460px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--6 {
+    width: 1080px;
+    height: 1080px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--6 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-540px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--7 {
+    width: 1240px;
+    height: 1240px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--7 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-620px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--8 {
+    width: 1400px;
+    height: 1400px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--8 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-700px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--9 {
+    width: 1560px;
+    height: 1560px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--9 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-780px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--10 {
+    width: 1720px;
+    height: 1720px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--10 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-860px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--11 {
+    width: 1880px;
+    height: 1880px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--11 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-940px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--12 {
+    width: 2040px;
+    height: 2040px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--12 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-1020px);
   }
 }
 @media (max-width: 560px) {
@@ -330,22 +467,6 @@
     padding: 56px 16px 80px;
   }
   .tsbo_galaxy-section .tsbo_galaxy {
-    width: 550px;
-    height: 550px;
-  }
-  .tsbo_galaxy-section .tsbo_ring--1 {
-    width: 220px;
-    height: 220px;
-  }
-  .tsbo_galaxy-section .tsbo_ring--2 {
-    width: 330px;
-    height: 330px;
-  }
-  .tsbo_galaxy-section .tsbo_ring--3 {
-    width: 440px;
-    height: 440px;
-  }
-  .tsbo_galaxy-section .tsbo_ring--4 {
     width: 550px;
     height: 550px;
   }
@@ -362,17 +483,89 @@
     height: 42px;
     margin: -21px 0 0 -21px;
   }
+  .tsbo_galaxy-section .tsbo_ring--1 {
+    width: 220px;
+    height: 220px;
+  }
   .tsbo_galaxy-section .tsbo_orbit--1 .tsbo_star {
     transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-110px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--2 {
+    width: 330px;
+    height: 330px;
   }
   .tsbo_galaxy-section .tsbo_orbit--2 .tsbo_star {
     transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-165px);
   }
+  .tsbo_galaxy-section .tsbo_ring--3 {
+    width: 440px;
+    height: 440px;
+  }
   .tsbo_galaxy-section .tsbo_orbit--3 .tsbo_star {
     transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-220px);
   }
+  .tsbo_galaxy-section .tsbo_ring--4 {
+    width: 550px;
+    height: 550px;
+  }
   .tsbo_galaxy-section .tsbo_orbit--4 .tsbo_star {
     transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-275px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--5 {
+    width: 660px;
+    height: 660px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--5 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-330px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--6 {
+    width: 770px;
+    height: 770px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--6 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-385px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--7 {
+    width: 880px;
+    height: 880px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--7 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-440px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--8 {
+    width: 990px;
+    height: 990px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--8 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-495px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--9 {
+    width: 1100px;
+    height: 1100px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--9 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-550px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--10 {
+    width: 1210px;
+    height: 1210px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--10 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-605px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--11 {
+    width: 1320px;
+    height: 1320px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--11 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-660px);
+  }
+  .tsbo_galaxy-section .tsbo_ring--12 {
+    width: 1430px;
+    height: 1430px;
+  }
+  .tsbo_galaxy-section .tsbo_orbit--12 .tsbo_star {
+    transform: rotate(calc(var(--seat) * 360deg / var(--total))) translateY(-715px);
   }
 }
 
