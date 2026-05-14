@@ -63,19 +63,26 @@ export default function GalaxyTeam({
         aria-label="Team members orbiting around the brand"
       >
         <div className="tsbo_galaxy__rings" aria-hidden="true">
-          <span className="tsbo_halo"></span>
+          {/* teamMembers */}
+          {/* <span className="tsbo_halo"></span>
           <span className="tsbo_ring--1"></span>
           <span className="tsbo_ring--2"></span>
-          <span className="tsbo_ring--3"></span>
-          {/* <span className="tsbo_ring--4"></span> */}
+          <span className="tsbo_ring--3"></span> */}
+          {orbitTeam?.teamMembers?.map((member, i) => (
+            <span key={i} className={`tsbo_ring--${i + 1}`}></span>
+          ))}
         </div>
 
-        <div 
-          className="tsbo_core" 
+        <div
+          className="tsbo_core"
           aria-hidden="true"
-          style={options?.uploadImage ? {
-            background: `url(${options?.image}) center/cover no-repeat`
-          } : {}}
+          style={
+            options?.uploadImage
+              ? {
+                  background: `url(${options?.image}) center/cover no-repeat`,
+                }
+              : {}
+          }
         >
           {!options?.uploadImage && (
             <div>

@@ -1118,15 +1118,10 @@ function GalaxyTeam({
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "tsbo_galaxy__rings",
     "aria-hidden": "true"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "tsbo_halo"
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "tsbo_ring--1"
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "tsbo_ring--2"
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "tsbo_ring--3"
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, orbitTeam?.teamMembers?.map((member, i) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    key: i,
+    className: `tsbo_ring--${i + 1}`
+  }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "tsbo_core",
     "aria-hidden": "true",
     style: options?.uploadImage ? {
