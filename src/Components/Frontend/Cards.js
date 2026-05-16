@@ -26,7 +26,10 @@ export default function GalaxyTeam({
         />
       )}
       {options.showTitle && !RichTextComponent && (
-        <h2 id="team-title" dangerouslySetInnerHTML={{ __html: title }}></h2>
+        <h2
+          className="tsbo_title"
+          dangerouslySetInnerHTML={{ __html: title }}
+        ></h2>
       )}
       {options.showTitle && RichTextComponent && (
         <RichTextComponent

@@ -1010,18 +1010,43 @@ const Style = ({
   id
 }) => {
   const {
-    colors
+    styles = {}
   } = attributes;
   const mainSl = `#${id}`;
-  const blockSl = `${mainSl} .bBlocksTestPurpose`;
+  const sectionSl = `${mainSl} .tsbo_galaxy-section`;
+  const tagSl = `${sectionSl} .tsbo_eyebrow`;
+  const titleSl = `${sectionSl} .tsbo_title`;
+  const subTitleSl = `${sectionSl} .tsbo_lede`;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", {
     dangerouslySetInnerHTML: {
       __html: `
-		
-		${blockSl} p{
-			${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getColorsCSS)(colors)}
-		}
+		  ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)("", styles?.header?.typo)?.googleFontLink}
+		  ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)("", styles?.header?.title?.typo)?.googleFontLink}
+		  ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)("", styles?.header?.subTitle?.typo)?.googleFontLink}
 
+		     ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)(tagSl, styles?.header?.typo)?.styles}
+			 ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)(titleSl, styles?.header?.title?.typo)?.styles}
+			 ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)(subTitleSl, styles?.header?.subTitle?.typo)?.styles}
+		
+		 ${sectionSl} {
+            ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getBackgroundCSS)(styles?.bg)}
+			min-height: ${styles?.height || "100vh"};
+			border-radius:${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getBoxCSS)(styles?.radius)};
+        }
+
+		${tagSl}{
+			color: ${styles?.header?.color};
+			padding: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getBoxCSS)(styles?.header?.padding)};
+			border-radius: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getBoxCSS)(styles?.header?.radius)};
+		}
+		${titleSl}{
+			color: ${styles?.header?.title?.color};
+	
+		}
+		${subTitleSl}{
+			color: ${styles?.header?.subTitle?.color};
+	
+		}
 	`
     }
   });
@@ -1081,7 +1106,7 @@ function GalaxyTeam({
     className: "tsbo_eyebrow",
     placeholder: "Tag"
   }), options.showTitle && !RichTextComponent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
-    id: "team-title",
+    className: "tsbo_title",
     dangerouslySetInnerHTML: {
       __html: title
     }

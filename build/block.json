@@ -187,6 +187,94 @@
         }
       ]
     },
+    "styles": {
+      "type": "object",
+      "default": {
+        "bg": {
+          "type": "gradient",
+          "gradient": "linear-gradient(180deg, #0b1020, #131a36)"
+        },
+        "height": "100vh",
+        "radius": {
+          "top": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "left": "0px"
+        },
+        "header": {
+          "color": "#a4adc6",
+          "padding": {
+            "top": "6px",
+            "right": "12px",
+            "bottom": "6px",
+            "left": "12px"
+          },
+          "radius": {
+            "top": "999px",
+            "right": "999px",
+            "bottom": "999px",
+            "left": "999px"
+          },
+          "typo": {
+            "fontFamily": "",
+            "fontCategory": "",
+            "fontWeight": "",
+            "fontVariant": "",
+            "isUploadFont": false,
+            "fontSize": {
+              "desktop": 12,
+              "tablet": 12,
+              "mobile": 12
+            },
+            "fontStyle": "normal",
+            "textTransform": "none",
+            "textDecoration": "none",
+            "lineHeight": "",
+            "letterSpace": "0.18em"
+          },
+          "title": {
+            "color": "#e9ecf5",
+            "typo": {
+              "fontFamily": "",
+              "fontCategory": "400",
+              "fontWeight": "400",
+              "fontVariant": "",
+              "isUploadFont": false,
+              "fontSize": {
+                "desktop": 44,
+                "tablet": 44,
+                "mobile": 44
+              },
+              "fontStyle": "normal",
+              "textTransform": "none",
+              "textDecoration": "none",
+              "lineHeight": "",
+              "letterSpace": ""
+            }
+          },
+          "subTitle": {
+            "color": "#a4adc6",
+            "typo": {
+              "fontFamily": "",
+              "fontCategory": "400",
+              "fontWeight": "400",
+              "fontVariant": "",
+              "isUploadFont": false,
+              "fontSize": {
+                "desktop": 22,
+                "tablet": 22,
+                "mobile": 22
+              },
+              "fontStyle": "normal",
+              "textTransform": "none",
+              "textDecoration": "none",
+              "lineHeight": "1.6",
+              "letterSpace": ""
+            }
+          }
+        }
+      }
+    },
     "options": {
       "type": "object",
       "default": {
