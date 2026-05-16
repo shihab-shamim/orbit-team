@@ -1002,7 +1002,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../bpl-tools/utils/getCSS */ "../bpl-tools/utils/getCSS.js");
+/* harmony import */ var _bpl_tools_utils_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../bpl-tools/utils/data */ "../bpl-tools/utils/data.js");
+/* harmony import */ var _bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../bpl-tools/utils/getCSS */ "../bpl-tools/utils/getCSS.js");
+
 
 
 const Style = ({
@@ -1017,37 +1019,101 @@ const Style = ({
   const tagSl = `${sectionSl} .tsbo_eyebrow`;
   const titleSl = `${sectionSl} .tsbo_title`;
   const subTitleSl = `${sectionSl} .tsbo_lede`;
+  const brandMarkSl = `${sectionSl} .tsbo_core`;
+  const markSl = `${sectionSl} .tsbo_core__mark`;
+  const subMarkSl = `${sectionSl} .tsbo_core__sub`;
+  const titleMarkSl = `${sectionSl} .tsbo_core__title`;
+  const teamMemberSl = `${sectionSl} .tsbo_star`;
+  const teamRingSl = `${sectionSl} .tsbo_ring`;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", {
     dangerouslySetInnerHTML: {
       __html: `
-		  ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)("", styles?.header?.typo)?.googleFontLink}
-		  ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)("", styles?.header?.title?.typo)?.googleFontLink}
-		  ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)("", styles?.header?.subTitle?.typo)?.googleFontLink}
+			${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getTypoCSS)("", styles?.header?.typo)?.googleFontLink}
+			${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getTypoCSS)("", styles?.header?.title?.typo)?.googleFontLink}
+			${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getTypoCSS)("", styles?.header?.subTitle?.typo)?.googleFontLink}
+			${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getTypoCSS)("", styles?.brandMark?.mark?.typo)?.googleFontLink}
+			${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getTypoCSS)("", styles?.brandMark?.title?.typo)?.googleFontLink}
 
-		     ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)(tagSl, styles?.header?.typo)?.styles}
-			 ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)(titleSl, styles?.header?.title?.typo)?.styles}
-			 ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getTypoCSS)(subTitleSl, styles?.header?.subTitle?.typo)?.styles}
+				${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getTypoCSS)(tagSl, styles?.header?.typo)?.styles}
+				${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getTypoCSS)(titleSl, styles?.header?.title?.typo)?.styles}
+				${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getTypoCSS)(subTitleSl, styles?.header?.subTitle?.typo)?.styles}
+				${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getTypoCSS)(markSl, styles?.brandMark?.mark?.typo)?.styles}
+				${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getTypoCSS)(subMarkSl, styles?.brandMark?.mark?.typo)?.styles}
+				${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getTypoCSS)(titleMarkSl, styles?.brandMark?.title?.typo)?.styles}
+			
+			${sectionSl} {
+				${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getBackgroundCSS)(styles?.bg)}
+				min-height: ${styles?.height || "100vh"};
+				border-radius:${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getBoxCSS)(styles?.radius)};
+				margin:${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getBoxCSS)(styles?.margin?.desktop)};
+				padding:${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getBoxCSS)(styles?.padding?.desktop)};
+			}
+
+			${tagSl}{
+				color: ${styles?.header?.color};
+				padding: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getBoxCSS)(styles?.header?.padding)};
+				border-radius: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getBoxCSS)(styles?.header?.radius)};
+			}
+			${titleSl}{
+				color: ${styles?.header?.title?.color};
 		
-		 ${sectionSl} {
-            ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getBackgroundCSS)(styles?.bg)}
-			min-height: ${styles?.height || "100vh"};
-			border-radius:${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getBoxCSS)(styles?.radius)};
-        }
+			}
+			${subTitleSl}{
+				color: ${styles?.header?.subTitle?.color};
+		
+			}
+				${brandMarkSl}{
+				${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getBackgroundCSS)(styles?.brandMark?.bg)}
+				width: ${styles?.brandMark?.width || "180px"};
+				height: ${styles?.brandMark?.height || "180px"};
+				border-radius: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getBoxCSS)(styles?.brandMark?.radius)};
+				box-shadow: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getMultiShadowCSS)(styles?.brandMark?.shadow)};
+			}
+			${markSl},${subMarkSl}{
+				color: ${styles?.brandMark?.mark?.color};
+			
+			}
+				${titleMarkSl}{
+				color: ${styles?.brandMark?.title?.color};
+				margin:${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getBoxCSS)(styles?.brandMark?.title?.margin)};
+			
+			}
 
-		${tagSl}{
-			color: ${styles?.header?.color};
-			padding: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getBoxCSS)(styles?.header?.padding)};
-			border-radius: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_1__.getBoxCSS)(styles?.header?.radius)};
-		}
-		${titleSl}{
-			color: ${styles?.header?.title?.color};
-	
-		}
-		${subTitleSl}{
-			color: ${styles?.header?.subTitle?.color};
-	
-		}
-	`
+			${teamMemberSl}{
+				width: ${styles?.teamMember?.width || "64px"};
+				height: ${styles?.teamMember?.height || "64px"};
+			}
+			${teamMemberSl} a {
+				border-radius: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getBoxCSS)(styles?.teamMember?.radius)};
+				box-shadow: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getMultiShadowCSS)(styles?.teamMember?.shadow)};
+				border: ${styles?.teamMember?.border?.width || "1px"} ${styles?.teamMember?.border?.color || "transparent"} ${styles?.teamMember?.border?.style || "solid"} ;
+			}
+			${teamMemberSl} a:hover {
+		transform: scale(${styles?.teamMember?.scal});
+		border: ${styles?.teamMember?.hoverBorder?.width || "1px"} ${styles?.teamMember?.hoverBorder?.color || "transparent"} ${styles?.teamMember?.hoverBorder?.style || "solid"} ;
+		box-shadow: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getMultiShadowCSS)(styles?.teamMember?.hoverShadow)};
+	}
+		${teamRingSl}{
+		border-color: ${styles?.teamMember?.orbit?.ring?.color};
+		border-width: ${styles?.teamMember?.orbit?.ring?.width};
+		border-style: ${styles?.teamMember?.orbit?.ring?.style};
+	}
+		
+
+
+			${_bpl_tools_utils_data__WEBPACK_IMPORTED_MODULE_1__.tabBreakpoint}{
+				${sectionSl}{
+					padding: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getBoxCSS)(styles?.padding?.tablet)};
+					margin: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getBoxCSS)(styles?.margin?.tablet)};
+				}
+			}
+				${_bpl_tools_utils_data__WEBPACK_IMPORTED_MODULE_1__.mobileBreakpoint}{
+					${sectionSl}{
+						padding: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getBoxCSS)(styles?.padding?.mobile)};
+						margin: ${(0,_bpl_tools_utils_getCSS__WEBPACK_IMPORTED_MODULE_2__.getBoxCSS)(styles?.margin?.mobile)};
+					}
+				}
+		`
     }
   });
 };
@@ -1146,7 +1212,7 @@ function GalaxyTeam({
     "aria-hidden": "true"
   }, teamMembers?.map((member, i) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     key: i,
-    className: `tsbo_ring--${i + 1}`
+    className: `tsbo_ring--${i + 1} tsbo_ring`
   }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "tsbo_core",
     "aria-hidden": "true",

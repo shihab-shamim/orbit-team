@@ -8,7 +8,7 @@
   // min-height: 100vh;
   max-width: 100%;
   margin: 0 auto;
-  padding: 80px 24px 120px;
+  // padding: 80px 24px 120px;
   text-align: center;
   overflow: hidden;
 
@@ -74,7 +74,7 @@
     .tsbo_ring--#{$i} {
       width: 160px + ($i * 200px);
       height: 160px + ($i * 200px);
-      border: 1px dashed rgba(255, 255, 255, 0.1);
+      // border: 1px dashed #ffffff1a;
     }
   }
 
@@ -94,18 +94,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: radial-gradient(
-        circle at 30% 30%,
-        rgba(255, 255, 255, 0.18),
-        transparent 55%
-      ),
-      linear-gradient(135deg, #7c5cff, #22d3ee);
-    box-shadow:
-      0 20px 60px rgba(124, 92, 255, 0.35),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.18);
     display: grid;
     place-items: center;
     text-align: center;
@@ -113,23 +101,6 @@
     overflow: hidden;
     background-size: cover !important;
     background-position: center !important;
-
-    .tsbo_core__mark {
-      font-size: 11px;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.85);
-    }
-    .tsbo_core__title {
-      font-size: 22px;
-      font-weight: 700;
-      margin-top: 4px;
-    }
-    .tsbo_core__sub {
-      font-size: 11px;
-      color: rgba(255, 255, 255, 0.75);
-      margin-top: 4px;
-    }
   }
 
   .tsbo_orbit {
@@ -154,8 +125,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 64px;
-    height: 64px;
+    // width: 64px;
+    // height: 64px;
     margin: -32px 0 0 -32px;
     list-style: none !important;
 
@@ -163,20 +134,20 @@
       display: block;
       width: 100%;
       height: 100%;
-      border-radius: 50%;
+      // border-radius: 50%;
       position: relative;
       text-decoration: none;
       color: inherit;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+      // background: rgba(255, 255, 255, 0.06);
+      // border: 1px solid rgba(255, 255, 255, 0.12);
+      // box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
       transition: all 0.25s ease;
       pointer-events: auto;
 
       &:hover {
-        transform: scale(1.12);
-        border-color: #22d3ee;
-        box-shadow: 0 10px 26px rgba(34, 211, 238, 0.35);
+        // transform: scale(1.12);
+        // border-color: #22d3ee;
+        // box-shadow: 0 10px 26px rgba(34, 211, 238, 0.35);
 
         .tsbo_name {
           opacity: 1;
@@ -270,8 +241,8 @@
     }
 
     .tsbo_star {
-      width: 52px;
-      height: 52px;
+      width: 52px !important;
+      height: 52px !important;
       margin: -26px 0 0 -26px;
     }
 
@@ -302,13 +273,13 @@
       height: calc(110px + 40px);
     }
     .tsbo_core {
-      width: 110px;
-      height: 110px;
+      width: 130px !important;
+      height: 130px !important;
     }
 
     .tsbo_star {
-      width: 42px;
-      height: 42px;
+      width: 42px !important;
+      height: 42px !important;
       margin: -21px 0 0 -21px;
     }
 

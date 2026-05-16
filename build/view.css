@@ -8,7 +8,6 @@
 .tsbo_galaxy-section {
   max-width: 100%;
   margin: 0 auto;
-  padding: 80px 24px 120px;
   text-align: center;
   overflow: hidden;
 }
@@ -60,62 +59,50 @@
 .tsbo_galaxy-section .tsbo_ring--1 {
   width: 360px;
   height: 360px;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .tsbo_galaxy-section .tsbo_ring--2 {
   width: 560px;
   height: 560px;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .tsbo_galaxy-section .tsbo_ring--3 {
   width: 760px;
   height: 760px;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .tsbo_galaxy-section .tsbo_ring--4 {
   width: 960px;
   height: 960px;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .tsbo_galaxy-section .tsbo_ring--5 {
   width: 1160px;
   height: 1160px;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .tsbo_galaxy-section .tsbo_ring--6 {
   width: 1360px;
   height: 1360px;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .tsbo_galaxy-section .tsbo_ring--7 {
   width: 1560px;
   height: 1560px;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .tsbo_galaxy-section .tsbo_ring--8 {
   width: 1760px;
   height: 1760px;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .tsbo_galaxy-section .tsbo_ring--9 {
   width: 1960px;
   height: 1960px;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .tsbo_galaxy-section .tsbo_ring--10 {
   width: 2160px;
   height: 2160px;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .tsbo_galaxy-section .tsbo_ring--11 {
   width: 2360px;
   height: 2360px;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .tsbo_galaxy-section .tsbo_ring--12 {
   width: 2560px;
   height: 2560px;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 .tsbo_galaxy-section .tsbo_halo {
   width: 220px;
@@ -128,11 +115,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.18), transparent 55%), linear-gradient(135deg, #7c5cff, #22d3ee);
-  box-shadow: 0 20px 60px rgba(124, 92, 255, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.18);
   display: grid;
   place-items: center;
   text-align: center;
@@ -140,22 +122,6 @@
   overflow: hidden;
   background-size: cover !important;
   background-position: center !important;
-}
-.tsbo_galaxy-section .tsbo_core .tsbo_core__mark {
-  font-size: 11px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.85);
-}
-.tsbo_galaxy-section .tsbo_core .tsbo_core__title {
-  font-size: 22px;
-  font-weight: 700;
-  margin-top: 4px;
-}
-.tsbo_galaxy-section .tsbo_core .tsbo_core__sub {
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.75);
-  margin-top: 4px;
 }
 .tsbo_galaxy-section .tsbo_orbit {
   list-style: none !important;
@@ -203,8 +169,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 64px;
-  height: 64px;
   margin: -32px 0 0 -32px;
   list-style: none !important;
 }
@@ -212,20 +176,11 @@
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   position: relative;
   text-decoration: none;
   color: inherit;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
   transition: all 0.25s ease;
   pointer-events: auto;
-}
-.tsbo_galaxy-section .tsbo_star a:hover {
-  transform: scale(1.12);
-  border-color: #22d3ee;
-  box-shadow: 0 10px 26px rgba(34, 211, 238, 0.35);
 }
 .tsbo_galaxy-section .tsbo_star a:hover .tsbo_name {
   opacity: 1;
@@ -365,8 +320,8 @@
     height: 140px;
   }
   .tsbo_galaxy-section .tsbo_star {
-    width: 52px;
-    height: 52px;
+    width: 52px !important;
+    height: 52px !important;
     margin: -26px 0 0 -26px;
   }
   .tsbo_galaxy-section .tsbo_ring--1 {
@@ -467,12 +422,12 @@
     height: 150px;
   }
   .tsbo_galaxy-section .tsbo_core {
-    width: 110px;
-    height: 110px;
+    width: 130px !important;
+    height: 130px !important;
   }
   .tsbo_galaxy-section .tsbo_star {
-    width: 42px;
-    height: 42px;
+    width: 42px !important;
+    height: 42px !important;
     margin: -21px 0 0 -21px;
   }
   .tsbo_galaxy-section .tsbo_ring--1 {

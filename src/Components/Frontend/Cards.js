@@ -72,7 +72,7 @@ export default function GalaxyTeam({
           <span className="tsbo_ring--2"></span>
           <span className="tsbo_ring--3"></span> */}
           {teamMembers?.map((member, i) => (
-            <span key={i} className={`tsbo_ring--${i + 1}`}></span>
+            <span key={i} className={`tsbo_ring--${i + 1} tsbo_ring`}></span>
           ))}
         </div>
 
