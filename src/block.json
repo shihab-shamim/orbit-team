@@ -430,7 +430,47 @@
             "style": "solid"
           },
           "orbit": {
-            "ring": { "color": "#ffffff1a", "width": "1px", "style": "dashed" }
+            "ring": { "color": "#ffffff1a", "width": "1px", "style": "dashed" },
+            "animation": 50,
+            "width": "200px"
+          },
+          "name": {
+            "color": "#e9ecf5",
+            "bg": { "type": "solid", "color": "#0b1020d9" },
+            "padding": {
+              "top": "4px",
+              "right": "8px",
+              "bottom": "4px",
+              "left": "8px"
+            },
+            "radius": {
+              "top": "6px",
+              "right": "6px",
+              "bottom": "6px",
+              "left": "6px"
+            },
+            "border": {
+              "color": "#ffffff1a",
+              "width": "1px",
+              "style": "solid"
+            },
+            "typo": {
+              "fontFamily": "",
+              "fontCategory": "",
+              "fontWeight": "",
+              "fontVariant": "",
+              "isUploadFont": false,
+              "fontSize": {
+                "desktop": 9,
+                "tablet": 9,
+                "mobile": 9
+              },
+              "fontStyle": "normal",
+              "textTransform": "none",
+              "textDecoration": "none",
+              "lineHeight": "",
+              "letterSpace": ""
+            }
           }
         }
       }

@@ -24,6 +24,7 @@ const Style = ({ attributes, id }) => {
   const titleMarkSl = `${sectionSl} .tsbo_core__title`;
   const teamMemberSl = `${sectionSl} .tsbo_star`;
   const teamRingSl = `${sectionSl} .tsbo_ring`;
+  const teamNameSl = `${sectionSl} .tsbo_star .tsbo_name`;
 
   return (
     <style
@@ -34,6 +35,7 @@ const Style = ({ attributes, id }) => {
 			${getTypoCSS("", styles?.header?.subTitle?.typo)?.googleFontLink}
 			${getTypoCSS("", styles?.brandMark?.mark?.typo)?.googleFontLink}
 			${getTypoCSS("", styles?.brandMark?.title?.typo)?.googleFontLink}
+			${getTypoCSS("", styles?.teamMember?.name?.typo)?.googleFontLink}
 
 				${getTypoCSS(tagSl, styles?.header?.typo)?.styles}
 				${getTypoCSS(titleSl, styles?.header?.title?.typo)?.styles}
@@ -41,6 +43,7 @@ const Style = ({ attributes, id }) => {
 				${getTypoCSS(markSl, styles?.brandMark?.mark?.typo)?.styles}
 				${getTypoCSS(subMarkSl, styles?.brandMark?.mark?.typo)?.styles}
 				${getTypoCSS(titleMarkSl, styles?.brandMark?.title?.typo)?.styles}
+				${getTypoCSS(teamNameSl, styles?.teamMember?.name?.typo)?.styles}
 			
 			${sectionSl} {
 				${getBackgroundCSS(styles?.bg)}
@@ -48,6 +51,8 @@ const Style = ({ attributes, id }) => {
 				border-radius:${getBoxCSS(styles?.radius)};
 				margin:${getBoxCSS(styles?.margin?.desktop)};
 				padding:${getBoxCSS(styles?.padding?.desktop)};
+				--orbit-animation-duration: ${styles?.teamMember?.orbit?.animation || 50}s;
+				--orbit-ring-width: ${styles?.teamMember?.orbit?.width || "200px"};
 			}
 
 			${tagSl}{
@@ -103,6 +108,15 @@ const Style = ({ attributes, id }) => {
 		border-width: ${styles?.teamMember?.orbit?.ring?.width};
 		border-style: ${styles?.teamMember?.orbit?.ring?.style};
 	}
+		${teamNameSl}{
+	  ${getBackgroundCSS(styles?.teamMember?.name?.bg)}
+      color: ${styles?.teamMember?.name?.color};
+      padding: ${getBoxCSS(styles?.teamMember?.name?.padding)};
+      border-radius: ${getBoxCSS(styles?.teamMember?.name?.radius)};
+      border: ${styles?.teamMember?.name?.border?.width || "1px"} ${
+        styles?.teamMember?.name?.border?.color || "transparent"
+      } ${styles?.teamMember?.name?.border?.style || "solid"};
+    }
 		
 
 

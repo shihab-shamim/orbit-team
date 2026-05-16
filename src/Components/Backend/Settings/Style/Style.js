@@ -498,6 +498,142 @@ const Style = ({ attributes, setAttributes, device }) => {
             })
           }
         />
+        <RangeControl
+          className="mt15"
+          label={__("Animation Duration", "orbit-team")}
+          value={styles?.teamMember?.orbit?.animation}
+          onChange={(value) =>
+            setAttributes({
+              styles: {
+                ...styles,
+                teamMember: {
+                  ...styles.teamMember,
+                  orbit: { ...styles.teamMember.orbit, animation: value },
+                },
+              },
+            })
+          }
+          min={0}
+          max={200}
+          step={1}
+        />
+        <UnitControl
+          className="mt15"
+          label={__("Orbit Gap", "orbit-team")}
+          value={styles?.teamMember?.orbit?.width}
+          onChange={(value) =>
+            setAttributes({
+              styles: {
+                ...styles,
+                teamMember: {
+                  ...styles.teamMember,
+                  orbit: { ...styles.teamMember.orbit, width: value },
+                },
+              },
+            })
+          }
+        />
+      </PanelBody>
+      <PanelBody
+        className="bPlPanelBody"
+        initialOpen={false}
+        title={__("Team Member Name", "orbit-team")}
+      >
+        <Typography
+          label={__("Typography", "orbit-team")}
+          value={styles?.teamMember?.name?.typo}
+          onChange={(value) =>
+            setAttributes({
+              styles: {
+                ...styles,
+                teamMember: {
+                  ...styles.teamMember,
+                  name: { ...styles.teamMember.name, typo: value },
+                },
+              },
+            })
+          }
+        />
+        <ColorControl
+          className="mt10"
+          label={__("Color", "orbit-team")}
+          value={styles?.teamMember?.name?.color}
+          onChange={(value) =>
+            setAttributes({
+              styles: {
+                ...styles,
+                teamMember: {
+                  ...styles.teamMember,
+                  name: { ...styles.teamMember.name, color: value },
+                },
+              },
+            })
+          }
+        />
+        <Background
+          className="mt10"
+          label={__("Background", "orbit-team")}
+          value={styles?.teamMember?.name?.bg}
+          onChange={(value) =>
+            setAttributes({
+              styles: {
+                ...styles,
+                teamMember: {
+                  ...styles.teamMember,
+                  name: { ...styles.teamMember.name, bg: value },
+                },
+              },
+            })
+          }
+        />
+        <BoxControl
+          className="mt10"
+          label={__("Padding", "orbit-team")}
+          values={styles?.teamMember?.name?.padding}
+          onChange={(value) =>
+            setAttributes({
+              styles: {
+                ...styles,
+                teamMember: {
+                  ...styles.teamMember,
+                  name: { ...styles.teamMember.name, padding: value },
+                },
+              },
+            })
+          }
+        />
+        <BoxControl
+          className="mt10"
+          label={__("Border Radius", "orbit-team")}
+          values={styles?.teamMember?.name?.radius}
+          onChange={(value) =>
+            setAttributes({
+              styles: {
+                ...styles,
+                teamMember: {
+                  ...styles.teamMember,
+                  name: { ...styles.teamMember.name, radius: value },
+                },
+              },
+            })
+          }
+        />
+        <BorderControl
+          className="mt10"
+          label={__("Border", "orbit-team")}
+          value={styles?.teamMember?.name?.border}
+          onChange={(value) =>
+            setAttributes({
+              styles: {
+                ...styles,
+                teamMember: {
+                  ...styles.teamMember,
+                  name: { ...styles.teamMember.name, border: value },
+                },
+              },
+            })
+          }
+        />
       </PanelBody>
     </>
   );
