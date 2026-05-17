@@ -15,6 +15,7 @@ const Style = ({ attributes, id }) => {
 
   const mainSl = `#${id}`;
   const sectionSl = `${mainSl} .tsbo_galaxy-section`;
+  const orbitSectionSl = `${sectionSl} .tsbo_galaxy`;
   const tagSl = `${sectionSl} .tsbo_eyebrow`;
   const titleSl = `${sectionSl} .tsbo_title`;
   const subTitleSl = `${sectionSl} .tsbo_lede`;
@@ -24,7 +25,7 @@ const Style = ({ attributes, id }) => {
   const titleMarkSl = `${sectionSl} .tsbo_core__title`;
   const teamMemberSl = `${sectionSl} .tsbo_star`;
   const teamRingSl = `${sectionSl} .tsbo_ring`;
-  const teamNameSl = `${sectionSl} .tsbo_star .tsbo_name`;
+	const teamNameSl = `${sectionSl} .tsbo_star .tsbo_name`;
 
   return (
     <style
@@ -53,6 +54,10 @@ const Style = ({ attributes, id }) => {
 				padding:${getBoxCSS(styles?.padding?.desktop)};
 				--orbit-animation-duration: ${styles?.teamMember?.orbit?.animation || 50}s;
 				--orbit-ring-width: ${styles?.teamMember?.orbit?.width || "200px"};
+			}
+
+			${orbitSectionSl}{
+				margin-top: ${styles?.gap?.desktop}px;
 			}
 
 			${tagSl}{
@@ -125,11 +130,19 @@ const Style = ({ attributes, id }) => {
 					padding: ${getBoxCSS(styles?.padding?.tablet)};
 					margin: ${getBoxCSS(styles?.margin?.tablet)};
 				}
+
+				${orbitSectionSl}{
+					margin-top: ${styles?.gap?.tablet}px;
+				}
 			}
 				${mobileBreakpoint}{
 					${sectionSl}{
 						padding: ${getBoxCSS(styles?.padding?.mobile)};
 						margin: ${getBoxCSS(styles?.margin?.mobile)};
+					}
+
+					${orbitSectionSl}{
+						margin-top: ${styles?.gap?.mobile}px;
 					}
 				}
 		`,

@@ -183,6 +183,13 @@
     }
   }
 
+  .tsbo_star__upright {
+    transform: rotate(calc(var(--seat) * (-360deg / var(--total))));
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
   @for $i from 1 through 12 {
     .tsbo_orbit--#{$i} .tsbo_star {
       transform: rotate(calc(var(--seat) * (360deg / var(--total))))
@@ -211,10 +218,10 @@
 }
 @keyframes spin-rev {
   from {
-    transform: rotate(calc(var(--seat) * (-360deg / var(--total))));
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(calc(var(--seat) * (-360deg / var(--total)) - 360deg));
+    transform: rotate(-360deg);
   }
 }
 

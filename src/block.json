@@ -188,6 +188,11 @@
     "styles": {
       "type": "object",
       "default": {
+        "gap":{
+          "desktop":100,
+          "tablet":50,
+          "mobile":30
+        },
         "padding": {
           "desktop": {
             "top": "80px",

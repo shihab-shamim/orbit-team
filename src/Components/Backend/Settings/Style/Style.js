@@ -84,6 +84,25 @@ const Style = ({ attributes, setAttributes, device }) => {
             })
           }
         />
+        <PanelRow>
+          <Label> Heading Gap</Label>
+          <Device />
+        </PanelRow>
+        <RangeControl
+          className="mt10"
+          min={1}
+          max={500}
+          step={1}
+          value={styles?.gap[device]}
+          onChange={(value) =>
+            setAttributes({
+              styles: {
+                ...styles,
+                gap: { ...styles.gap, [device]: value },
+              },
+            })
+          }
+        />
       </PanelBody>
 
       {(options?.showSubTitle || options?.showTitle || options?.showTag) && (

@@ -162,16 +162,18 @@ export default function GalaxyTeam({
             >
               {members.map((member, j) => (
                 <li className="tsbo_star" key={j} style={{ "--seat": j }}>
-                  <div className="tsbo_star__inner">
-                    <a
-                      href={member.link || "#"}
-                      aria-label={member.name}
-                      target={options.linkOpen ? "_blank" : "_self"}
-                      rel="noreferrer"
-                    >
-                      <img src={member.img} alt="" />
-                      <span className="tsbo_name">{member.name}</span>
-                    </a>
+                  <div className="tsbo_star__upright">
+                    <div className="tsbo_star__inner">
+                      <a
+                        href={member.link || "#"}
+                        aria-label={member.name}
+                        target={options.linkOpen ? "_blank" : "_self"}
+                        rel="noreferrer"
+                      >
+                        <img src={member.img} alt="" />
+                        <span className="tsbo_name">{member.name}</span>
+                      </a>
+                    </div>
                   </div>
                 </li>
               ))}

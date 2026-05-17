@@ -61,9 +61,7 @@ const General = ({ attributes, setAttributes }) => {
 
       const demoMembers = Array.from({ length: memberCount }, (_, i) => ({
         name: `Member ${i + 1}`,
-        img: `https://i.pravatar.cc/120?img=${
-          Math.floor(Math.random() * 70) + 1
-        }`,
+        img: `https://i.pravatar.cc/120?img=47`,
         link: "#",
       }));
 
@@ -242,7 +240,11 @@ const General = ({ attributes, setAttributes }) => {
                 setAttributes({ teamMembers: updatedTeamMembers });
               }
             }}
-            newItem={{ name: "", img: "", link: "#" }}
+            newItem={{
+              name: "",
+              img: "https://i.pravatar.cc/120?img=47",
+              link: "#",
+            }}
             ItemSettings={MemberSettings}
           />
         )}
