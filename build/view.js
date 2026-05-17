@@ -1296,7 +1296,7 @@ function GalaxyTeam({
     const orbitKey = Object.keys(orbitObj)[0];
     const members = orbitObj[orbitKey] || [];
     return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-      key: i,
+      key: `${i}-${JSON.stringify(members)}`,
       className: `tsbo_orbit tsbo_orbit--${i + 1}`,
       style: {
         "--total": members.length

@@ -156,7 +156,7 @@ export default function GalaxyTeam({
 
           return (
             <ul
-              key={i}
+              key={`${i}-${JSON.stringify(members)}`}
               className={`tsbo_orbit tsbo_orbit--${i + 1}`}
               style={{ "--total": members.length }}
             >
